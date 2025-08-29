@@ -1,0 +1,22 @@
+.texto{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #000000;
+    margin-top: 20%;
+    font-size: 25px;
+}
+
+.buttontroll {
+    background-color: #4cacaf; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 12px;
+    display: block; 
+    margin: 0 auto; 
+    margin-top: 20px; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer;
+}
