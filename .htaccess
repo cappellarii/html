@@ -1,16 +1,23 @@
 # mod_rewrite starts here
 
-RewriteEngine on
+# RewriteEngine on
 
 # does not apply t oexisting directories, meaning that if the folder exists on the server then don't change anything and don't run teh Rule!
 
-RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_FILENAME} !-d
 
 #  Check for file in directory with .html extension 
 
-RewriteCond %{REQUEST_FILNAME}\.html -f
+# RewriteCond %{REQUEST_FILNAME}\.html -f
 
 # Here we actually sahow the page that has the .html extension
 
-RewriteRule ^(.*)$ $1.html [NC,L]
+# RewriteRule ^(.*)$ $1.html [NC,L]
+
+#remove html file extension https://example.com/page.html
+# to https://example.com/page
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC, L]
 
