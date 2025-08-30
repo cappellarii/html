@@ -14,10 +14,9 @@
 
 # RewriteRule ^(.*)$ $1.html [NC,L]
 
-#remove html file extension https://example.com/page.html
-# to https://example.com/page
 RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-d
+RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.html [NC, L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
